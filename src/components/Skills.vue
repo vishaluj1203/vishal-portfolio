@@ -20,47 +20,88 @@
 </template>
 
 <script setup>
+import railsSvg from '@/icons/Ruby on Rails.svg'
+import fastApiSvg from '@/icons/FastAPI.svg'
+import vueSvg from '@/icons/Vue.js.svg'
+import piniaSvg from '@/icons/pinia.svg'
+import tailwindSvg from '@/icons/Tailwind CSS.svg'
+import postgresqlSvg from '@/icons/PostgresSQL.svg'
+import redisSvg from '@/icons/Redis.svg'
+import terraformSvg from '@/icons/HashiCorp Terraform.svg'
+import gcpSvg from '@/icons/Google Cloud.svg'
+import dockerSvg from '@/icons/Docker.svg'
+import gitSvg from '@/icons/Git.svg'
+import githubActionsSvg from '@/icons/GitHub Actions.svg'
+import gitlabSvg from '@/icons/GitLab.svg'
+import vitestSvg from '@/icons/vitest.svg'
+import storybookSvg from '@/icons/Storybook.svg'
+import sassSvg from '@/icons/Sass.svg'
+import bootstrapSvg from '@/icons/Bootstrap.svg'
+import figmaSvg from '@/icons/Figma.svg'
+import linuxSvg from '@/icons/Linux.svg'
+import jwtSvg from '@/icons/jwt.svg'
+import restapiSvg from '@/icons/restapi.svg'
+import javascriptSvg from '@/icons/JavaScript.svg'
+import typescriptSvg from '@/icons/TypeScript.svg'
+import html5Svg from '@/icons/HTML5.svg'
+import css3Svg from '@/icons/CSS3.svg'
+import nodeSvg from '@/icons/Node.js.svg'
+import npmSvg from '@/icons/NPM.svg'
+import viteSvg from '@/icons/Vite.js.svg'
+import webpackSvg from '@/icons/Webpack.svg'
+import babelSvg from '@/icons/Babel.svg'
+import eslintSvg from '@/icons/ESLint.svg'
+import jestSvg from '@/icons/Jest.svg'
+import cypressSvg from '@/icons/Cypress.svg'
+import postmanSvg from '@/icons/Postman.svg'
+import grafanaSvg from '@/icons/Grafana.svg'
+import prometheusSvg from '@/icons/Prometheus.svg'
+import kubernetesSvg from '@/icons/Kubernetes.svg'
+import helmSvg from '@/icons/Helm.svg'
+import firebaseSvg from '@/icons/Firebase.svg'
+import materialUiSvg from '@/icons/Material UI.svg'
+
 const skills = [
-  { name: 'Ruby on Rails', link: 'https://rubyonrails.org/', icon: 'src/icons/Ruby on Rails.svg' },
-  { name: 'FastAPI', link: 'https://fastapi.tiangolo.com/', icon: 'src/icons/FastAPI.svg' },
-  { name: 'Vue 3', link: 'https://vuejs.org/', icon: 'src/icons/Vue.js.svg' },
-  { name: 'Pinia', link: 'https://pinia.vuejs.org/', icon: 'src/icons/pinia.svg' },
-  { name: 'Tailwind CSS', link: 'https://tailwindcss.com/', icon: 'src/icons/Tailwind CSS.svg' },
-  { name: 'PostgreSQL', link: 'https://www.postgresql.org/', icon: 'src/icons/PostgresSQL.svg' },
-  { name: 'Redis', link: 'https://redis.io/', icon: 'src/icons/Redis.svg' },
-  { name: 'Terraform', link: 'https://www.terraform.io/', icon: 'src/icons/HashiCorp Terraform.svg' },
-  { name: 'Google Cloud', link: 'https://cloud.google.com/', icon: 'src/icons/Google Cloud.svg' },
-  { name: 'Docker', link: 'https://www.docker.com/', icon: 'src/icons/Docker.svg' },
-  { name: 'Git', link: 'https://git-scm.com/', icon: 'src/icons/Git.svg' },
-  { name: 'GitHub Actions', link: 'https://github.com/features/actions', icon: 'src/icons/GitHub Actions.svg' },
-  { name: 'GitLab CI/CD', link: 'https://docs.gitlab.com/ee/ci/', icon: 'src/icons/GitLab.svg' },
-  { name: 'Vitest', link: 'https://vitest.dev/', icon: 'src/icons/vitest.svg' },
-  { name: 'Storybook', link: 'https://storybook.js.org/', icon: 'src/icons/Storybook.svg' },
-  { name: 'SASS', link: 'https://sass-lang.com/', icon: 'src/icons/Sass.svg' },
-  { name: 'Bootstrap', link: 'https://getbootstrap.com/', icon: 'src/icons/Bootstrap.svg' },
-  { name: 'Figma', link: 'https://www.figma.com/', icon: 'src/icons/Figma.svg' },
-  { name: 'Linux', link: 'https://www.kernel.org/', icon: 'src/icons/Linux.svg' },
-  { name: 'OAuth2 / JWT', link: 'https://jwt.io/', icon: 'src/icons/jwt.svg' },
-  { name: 'REST API', link: 'https://restfulapi.net/', icon: 'src/icons/restapi.svg' },
-  { name: 'JavaScript', link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', icon: 'src/icons/JavaScript.svg' },
-  { name: 'TypeScript', link: 'https://www.typescriptlang.org/', icon: 'src/icons/TypeScript.svg' },
-  { name: 'HTML5', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML', icon: 'src/icons/HTML5.svg' },
-  { name: 'CSS3', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS', icon: 'src/icons/CSS3.svg' },
-  { name: 'Node.js', link: 'https://nodejs.org/', icon: 'src/icons/Node.js.svg' },
-  { name: 'npm', link: 'https://www.npmjs.com/', icon: 'src/icons/NPM.svg' },
-  { name: 'Vite', link: 'https://vitejs.dev/', icon: 'src/icons/Vite.js.svg' },
-  { name: 'Webpack', link: 'https://webpack.js.org/', icon: 'src/icons/Webpack.svg' },
-  { name: 'Babel', link: 'https://babeljs.io/', icon: 'src/icons/Babel.svg' },
-  { name: 'ESLint', link: 'https://eslint.org/', icon: 'src/icons/ESLint.svg' },
-  { name: 'Jest', link: 'https://jestjs.io/', icon: 'src/icons/Jest.svg' },
-  { name: 'Cypress', link: 'https://www.cypress.io/', icon: 'src/icons/Cypress.svg' },
-  { name: 'Postman', link: 'https://www.postman.com/', icon: 'src/icons/Postman.svg' },
-  { name: 'Grafana', link: 'https://grafana.com/', icon: 'src/icons/Grafana.svg' },
-  { name: 'Prometheus', link: 'https://prometheus.io/', icon: 'src/icons/Prometheus.svg' },
-  { name: 'Kubernetes', link: 'https://kubernetes.io/', icon: 'src/icons/Kubernetes.svg' },
-  { name: 'Helm', link: 'https://helm.sh/', icon: 'src/icons/Helm.svg' },
-  { name: 'Firebase', link: 'https://firebase.google.com/', icon: 'src/icons/Firebase.svg' },
-  { name: 'Material UI', link: 'https://mui.com/', icon: 'src/icons/Material UI.svg' },
+  { name: 'Ruby on Rails', link: 'https://rubyonrails.org/', icon: railsSvg },
+  { name: 'FastAPI', link: 'https://fastapi.tiangolo.com/', icon: fastApiSvg },
+  { name: 'Vue 3', link: 'https://vuejs.org/', icon: vueSvg },
+  { name: 'Pinia', link: 'https://pinia.vuejs.org/', icon: piniaSvg },
+  { name: 'Tailwind CSS', link: 'https://tailwindcss.com/', icon: tailwindSvg },
+  { name: 'PostgreSQL', link: 'https://www.postgresql.org/', icon: postgresqlSvg },
+  { name: 'Redis', link: 'https://redis.io/', icon: redisSvg },
+  { name: 'Terraform', link: 'https://www.terraform.io/', icon: terraformSvg },
+  { name: 'Google Cloud', link: 'https://cloud.google.com/', icon: gcpSvg },
+  { name: 'Docker', link: 'https://www.docker.com/', icon: dockerSvg },
+  { name: 'Git', link: 'https://git-scm.com/', icon: gitSvg },
+  { name: 'GitHub Actions', link: 'https://github.com/features/actions', icon: githubActionsSvg },
+  { name: 'GitLab CI/CD', link: 'https://docs.gitlab.com/ee/ci/', icon: gitlabSvg },
+  { name: 'Vitest', link: 'https://vitest.dev/', icon: vitestSvg },
+  { name: 'Storybook', link: 'https://storybook.js.org/', icon: storybookSvg },
+  { name: 'SASS', link: 'https://sass-lang.com/', icon: sassSvg },
+  { name: 'Bootstrap', link: 'https://getbootstrap.com/', icon: bootstrapSvg },
+  { name: 'Figma', link: 'https://www.figma.com/', icon: figmaSvg },
+  { name: 'Linux', link: 'https://www.kernel.org/', icon: linuxSvg },
+  { name: 'OAuth2 / JWT', link: 'https://jwt.io/', icon: jwtSvg },
+  { name: 'REST API', link: 'https://restfulapi.net/', icon: restapiSvg },
+  { name: 'JavaScript', link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', icon: javascriptSvg },
+  { name: 'TypeScript', link: 'https://www.typescriptlang.org/', icon: typescriptSvg },
+  { name: 'HTML5', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML', icon: html5Svg },
+  { name: 'CSS3', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS', icon: css3Svg },
+  { name: 'Node.js', link: 'https://nodejs.org/', icon: nodeSvg },
+  { name: 'npm', link: 'https://www.npmjs.com/', icon: npmSvg },
+  { name: 'Vite', link: 'https://vitejs.dev/', icon: viteSvg },
+  { name: 'Webpack', link: 'https://webpack.js.org/', icon: webpackSvg },
+  { name: 'Babel', link: 'https://babeljs.io/', icon: babelSvg },
+  { name: 'ESLint', link: 'https://eslint.org/', icon: eslintSvg },
+  { name: 'Jest', link: 'https://jestjs.io/', icon: jestSvg },
+  { name: 'Cypress', link: 'https://www.cypress.io/', icon: cypressSvg },
+  { name: 'Postman', link: 'https://www.postman.com/', icon: postmanSvg },
+  { name: 'Grafana', link: 'https://grafana.com/', icon: grafanaSvg },
+  { name: 'Prometheus', link: 'https://prometheus.io/', icon: prometheusSvg },
+  { name: 'Kubernetes', link: 'https://kubernetes.io/', icon: kubernetesSvg },
+  { name: 'Helm', link: 'https://helm.sh/', icon: helmSvg },
+  { name: 'Firebase', link: 'https://firebase.google.com/', icon: firebaseSvg },
+  { name: 'Material UI', link: 'https://mui.com/', icon: materialUiSvg },
 ]
 </script>
 
